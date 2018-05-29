@@ -16,6 +16,7 @@ BRIGHT=$(tput bold)
 NORMAL=$(tput sgr0)
 
 
+
 ################################################
 ## Aca definimos todas las funciones.
 ## Modularizamos porque somo prolijos :P
@@ -129,6 +130,9 @@ Ejercicio_7 () {
     alias cd..='echo "HAY QUE DEJAR ESPACIOS"'
     alias apagar="poweroff"
 
+    echo "No se puede definir un alias dentro de una funcion."
+    echo "Es una limitacion de Bash, sorry!"
+    
     printf "\n"
     echo "${CYAN}**** Ejercicio 7 completado **** ${NORMAL}"
     echo "${YELLOW}Presione una tecla par continuar! ${NORMAL}"
@@ -139,14 +143,35 @@ Ejercicio_8 () {
     echo "${CYAN}Corriendo Ejercicio 8... ${NORMAL}"
     printf "\n"
     
-    yo
-    dir
-    LS
-    cd..
+    echo "Todos los comandos de este ejercicio van a fallar por lo mencionado en el ejercicio 7"
+       
+    eval yo
+    eval dir
+    eval LS
+    eval cd..
     apagar
 
     printf "\n"
     echo "${CYAN}**** Ejercicio 8 completado **** ${NORMAL}"
+    echo "${YELLOW}Presione una tecla par continuar! ${NORMAL}"
+    read -n 1
+}
+
+Ejercicio_9 () {
+    clear
+    echo "${CYAN}Corriendo Ejercicio 9... ${NORMAL}"
+    printf "\n"
+    
+    echo "Todos los comandos de este ejercicio van a fallar por lo mencionado en el ejercicio 7"
+       
+    eval yo
+    eval dir
+    eval LS
+    eval cd..
+    apagar
+
+    printf "\n"
+    echo "${CYAN}**** Ejercicio 9 completado **** ${NORMAL}"
     echo "${YELLOW}Presione una tecla par continuar! ${NORMAL}"
     read -n 1
 }
@@ -162,5 +187,5 @@ Ejercicio_8 () {
 #Ejercicio_4
 #Ejercicio_5
 #Ejercicio_6
-Ejercicio_7
-Ejercicio_8
+#Ejercicio_7
+#Ejercicio_8
