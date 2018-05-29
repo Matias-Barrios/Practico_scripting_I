@@ -69,10 +69,52 @@ Ejercicio_3 () {
     echo "${CYAN}Corriendo Ejercicio 3... ${NORMAL}"
     printf "\n"
     
-    echo "Hola usuario ${RED} $(whoami) ${NORMAL}"
-    echo "Estas trabajando en la terminal ${RED}$( tty )${NORMAL} del equipo ${RED}$( hostname )${NORMAL}"
+    echo "Hola usuario ${GREEN} $(whoami) ${NORMAL}"
+    echo "Estas trabajando en la terminal ${GREEN}$( tty )${NORMAL} del equipo ${GREEN}$( hostname )${NORMAL}"
+    echo "Hoy es ${GREEN} $( date +%A' '%d' de '%b' de '%Y ) ${NORMAL}"
+    echo "Que tengas un buen dia!"
     printf "\n"
     echo "${CYAN}**** Ejercicio 3 completado **** ${NORMAL}"
+    echo "${YELLOW}Presione una tecla par continuar! ${NORMAL}"
+    read -n 1
+}
+Ejercicio_4 () {
+    clear
+    echo "${CYAN}Corriendo Ejercicio 4... ${NORMAL}"
+    printf "\n"
+    
+    find -type f -name '*.mp3' ~
+    
+    printf "\n"
+    echo "${CYAN}**** Ejercicio 4 completado **** ${NORMAL}"
+    echo "${YELLOW}Presione una tecla par continuar! ${NORMAL}"
+    read -n 1
+}
+Ejercicio_5 () {
+    clear
+    echo "${CYAN}Corriendo Ejercicio 5... ${NORMAL}"
+    printf "\n"
+    
+    fortune | cowsay
+    
+    printf "\n"
+    echo "${CYAN}**** Ejercicio 5 completado **** ${NORMAL}"
+    echo "${YELLOW}Presione una tecla par continuar! ${NORMAL}"
+    read -n 1
+}
+Ejercicio_6 () {
+    clear
+    echo "${CYAN}Corriendo Ejercicio 6... ${NORMAL}"
+    printf "\n"
+    
+    cd ~/cosas
+    touch pru1 prueba2 pru prueb raro
+    cd ~/otras/distinto
+    touch archi1 a2 b52 U2 cuarteto
+    cd
+    
+    printf "\n"
+    echo "${CYAN}**** Ejercicio 6 completado **** ${NORMAL}"
     echo "${YELLOW}Presione una tecla par continuar! ${NORMAL}"
     read -n 1
 }
@@ -81,7 +123,10 @@ Ejercicio_3 () {
 ###################################################
 
 ## Aca empieza la cosa
-Startup_message
+#Startup_message
 #Ejercicio_1
 #Ejercicio_2
-Ejercicio_3
+#Ejercicio_3
+#Ejercicio_4
+#Ejercicio_5
+Ejercicio_6
