@@ -107,7 +107,7 @@ Ejercicio_6 () {
     echo "${CYAN}Corriendo Ejercicio 6... ${NORMAL}"
     printf "\n"
     
-    cd ~/cosas
+    cd ~/cosas/ejer
     touch pru1 prueba2 pru prueb raro
     cd ~/otras/distinto
     touch archi1 a2 b52 U2 cuarteto
@@ -115,6 +115,38 @@ Ejercicio_6 () {
     
     printf "\n"
     echo "${CYAN}**** Ejercicio 6 completado **** ${NORMAL}"
+    echo "${YELLOW}Presione una tecla par continuar! ${NORMAL}"
+    read -n 1
+}
+Ejercicio_7 () {
+    clear
+    echo "${CYAN}Corriendo Ejercicio 7... ${NORMAL}"
+    printf "\n"
+    
+    alias yo="whoami"
+    alias dir="ls -la"
+    alias LS="sl"
+    alias cd..='echo "HAY QUE DEJAR ESPACIOS"'
+    alias apagar="poweroff"
+
+    printf "\n"
+    echo "${CYAN}**** Ejercicio 7 completado **** ${NORMAL}"
+    echo "${YELLOW}Presione una tecla par continuar! ${NORMAL}"
+    read -n 1
+}
+Ejercicio_8 () {
+    clear
+    echo "${CYAN}Corriendo Ejercicio 8... ${NORMAL}"
+    printf "\n"
+    
+    yo
+    dir
+    LS
+    cd..
+    apagar
+
+    printf "\n"
+    echo "${CYAN}**** Ejercicio 8 completado **** ${NORMAL}"
     echo "${YELLOW}Presione una tecla par continuar! ${NORMAL}"
     read -n 1
 }
@@ -129,4 +161,6 @@ Ejercicio_6 () {
 #Ejercicio_3
 #Ejercicio_4
 #Ejercicio_5
-Ejercicio_6
+#Ejercicio_6
+Ejercicio_7
+Ejercicio_8
