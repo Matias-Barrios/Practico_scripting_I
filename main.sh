@@ -25,7 +25,10 @@ Startup_message() {
     clear
     echo "${MAGENTA}Bienvenido!${NORMAL}"
     echo "Este script fue escrito por  ${RED}Matias Barrios${NORMAL} en Mayo de 2018 - Grupo 3IH"
-    echo "A continuacion procedemos a realizar los ejercicios uno por uno..."
+    echo "El codigo del mismo se puede encontrar en GitHub : ${GREEN}https://github.com/Matias-Barrios/Practico_scripting_I${NORMAL}"
+    echo "Este script fue testeado en ${GREEN}Xubuntu 16.04${NORMAL}"
+    echo "La version de BASH usada es : ${GREEN}4.3.48${NORMAL}"
+    echo "${YELLOW}A continuacion procedemos a realizar los ejercicios uno por uno...${NORMAL}"
     Contador
 }
 
@@ -48,6 +51,8 @@ Ejercicio_1 () {
     clear
     echo "${CYAN} Corriendo Ejercicio 1... ${NORMAL}"
     printf "\n"
+
+    echo "${RED}Este ejercicio no genera output!${NORMAL}"
     mkdir -p ~/{algunas/{ejer,teo},cosas/{ejer,teo},otras/{diferente,distinto},no/{nadaQueVEr,noSePuede,siSePudo}}
 
     printf "\n"
@@ -84,7 +89,8 @@ Ejercicio_4 () {
     echo "${CYAN}Corriendo Ejercicio 4... ${NORMAL}"
     printf "\n"
     
-    find -type f -name '*.mp3' ~
+    echo "${RED}Este ejercicio podria no generar output!${NORMAL}"
+    find ~ -type f -name '*.mp3' 
     
     printf "\n"
     echo "${CYAN}**** Ejercicio 4 completado **** ${NORMAL}"
@@ -108,6 +114,7 @@ Ejercicio_6 () {
     echo "${CYAN}Corriendo Ejercicio 6... ${NORMAL}"
     printf "\n"
     
+    echo "${RED}Este ejercicio no genera output!${NORMAL}"
     cd ~/cosas/ejer
     touch pru1 prueba2 pru prueb raro
     cd ~/otras/distinto
@@ -162,16 +169,138 @@ Ejercicio_9 () {
     echo "${CYAN}Corriendo Ejercicio 9... ${NORMAL}"
     printf "\n"
     
-    echo "Todos los comandos de este ejercicio van a fallar por lo mencionado en el ejercicio 7"
-       
-    eval yo
-    eval dir
-    eval LS
-    eval cd..
-    apagar
+    echo "${RED}Este ejercicio no genera output!${NORMAL}"
+    mkdir ${HOME}/si/aca
+    find ${HOME} -type f -regextype egrep -regex '.*/[aeiouAEIOU][^/]*[0-9]([.][^.]+)?$' | xargs cp -t ${HOME}/si/aca
 
     printf "\n"
     echo "${CYAN}**** Ejercicio 9 completado **** ${NORMAL}"
+    echo "${YELLOW}Presione una tecla par continuar! ${NORMAL}"
+    read -n 1
+}
+Ejercicio_10 () {
+    clear
+    echo "${CYAN}Corriendo Ejercicio 10... ${NORMAL}"
+    printf "\n"
+    
+    echo "El exit status del ultimo comando ejecutado es : ${RED} $? ${NORMAL}"
+    
+    printf "\n"
+    echo "${CYAN}**** Ejercicio 10 completado **** ${NORMAL}"
+    echo "${YELLOW}Presione una tecla par continuar! ${NORMAL}"
+    read -n 1
+}
+Ejercicio_11 () {
+    clear
+    echo "${CYAN}Corriendo Ejercicio 11... ${NORMAL}"
+    printf "\n"
+    
+    sed -n '8,22 p' /etc/passwd | cat -n
+    
+    printf "\n"
+    echo "${CYAN}**** Ejercicio 11 completado **** ${NORMAL}"
+    echo "${YELLOW}Presione una tecla par continuar! ${NORMAL}"
+    read -n 1
+}
+Ejercicio_12 () {
+    clear
+    echo "${CYAN}Corriendo Ejercicio 12... ${NORMAL}"
+    printf "\n"
+    
+    cal oct 28
+    
+    printf "\n"
+    echo "${CYAN}**** Ejercicio 12 completado **** ${NORMAL}"
+    echo "${YELLOW}Presione una tecla par continuar! ${NORMAL}"
+    read -n 1
+}
+Ejercicio_13 () {
+    clear
+    echo "${CYAN}Corriendo Ejercicio 13... ${NORMAL}"
+    printf "\n"
+    
+    uname -a
+    cat /etc/*release*
+    
+    printf "\n"
+    echo "${CYAN}**** Ejercicio 13 completado **** ${NORMAL}"
+    echo "${YELLOW}Presione una tecla par continuar! ${NORMAL}"
+    read -n 1
+}
+Ejercicio_14 () {
+    clear
+    echo "${CYAN}Corriendo Ejercicio 14... ${NORMAL}"
+    printf "\n"
+    
+    date  +%A' '%d' de '%b' de '%Y -d "+90 days"
+    
+    printf "\n"
+    echo "${CYAN}**** Ejercicio 14 completado **** ${NORMAL}"
+    echo "${YELLOW}Presione una tecla par continuar! ${NORMAL}"
+    read -n 1
+}
+Ejercicio_15 () {
+    clear
+    echo "${CYAN}Corriendo Ejercicio 15... ${NORMAL}"
+    printf "\n"
+    
+    wc -l ${HOME}/.bash_history
+    
+    printf "\n"
+    echo "${CYAN}**** Ejercicio 15 completado **** ${NORMAL}"
+    echo "${YELLOW}Presione una tecla par continuar! ${NORMAL}"
+    read -n 1
+}
+Ejercicio_16 () {
+    clear
+    echo "${CYAN}Corriendo Ejercicio 16... ${NORMAL}"
+    printf "\n"
+    
+    echo "${RED}Este ejercicio no genera output!${NORMAL}"
+    PATH="${PATH}:/home/usr/bin"
+    
+    printf "\n"
+    echo "${CYAN}**** Ejercicio 16 completado **** ${NORMAL}"
+    echo "${YELLOW}Presione una tecla par continuar! ${NORMAL}"
+    read -n 1
+}
+Ejercicio_17 () {
+    clear
+    echo "${CYAN}Corriendo Ejercicio 17... ${NORMAL}"
+    printf "\n"
+    
+    cowsay -f tux "Hola `whoami`"
+
+    
+    printf "\n"
+    echo "${CYAN}**** Ejercicio 17 completado **** ${NORMAL}"
+    echo "${YELLOW}Presione una tecla par continuar! ${NORMAL}"
+    read -n 1
+}
+Ejercicio_18 () {
+    clear
+    echo "${CYAN}Corriendo Ejercicio 18... ${NORMAL}"
+    printf "\n"
+    
+    cowsay -f dragon "DENUNCIADO!!!"
+
+    
+    printf "\n"
+    echo "${CYAN}**** Ejercicio 18 completado **** ${NORMAL}"
+    echo "${YELLOW}Presione una tecla par continuar! ${NORMAL}"
+    read -n 1
+}
+Ejercicio_19 () {
+    clear
+    echo "${CYAN}Corriendo Ejercicio 19... ${NORMAL}"
+    printf "\n"
+    
+    
+    echo "QUE LA FUERZA TE ACOMPAÑE"
+    telnet towel.blinkenlights.nl
+    
+    printf "\n"
+    echo "${CYAN}**** Ejercicio 19 completado **** ${NORMAL}"
     echo "${YELLOW}Presione una tecla par continuar! ${NORMAL}"
     read -n 1
 }
@@ -180,12 +309,23 @@ Ejercicio_9 () {
 ###################################################
 
 ## Aca empieza la cosa
-#Startup_message
-#Ejercicio_1
-#Ejercicio_2
-#Ejercicio_3
-#Ejercicio_4
-#Ejercicio_5
-#Ejercicio_6
-#Ejercicio_7
-#Ejercicio_8
+Startup_message
+Ejercicio_1
+Ejercicio_2
+Ejercicio_3
+Ejercicio_4
+Ejercicio_5
+Ejercicio_6
+Ejercicio_7
+Ejercicio_8
+Ejercicio_9
+Ejercicio_10
+Ejercicio_11
+Ejercicio_12
+Ejercicio_13
+Ejercicio_14
+Ejercicio_15
+Ejercicio_16
+Ejercicio_17
+Ejercicio_18
+Ejercicio_19
