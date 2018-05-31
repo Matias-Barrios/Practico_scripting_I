@@ -170,7 +170,7 @@ Ejercicio_9 () {
     printf "\n"
     
     echo "${RED}Este ejercicio no genera output!${NORMAL}"
-    mkdir ${HOME}/si/aca
+    mkdir -p ${HOME}/si/aca
     find ${HOME} -type f -regextype egrep -regex '.*/[aeiouAEIOU][^/]*[0-9]([.][^.]+)?$' | xargs cp -t ${HOME}/si/aca
 
     printf "\n"
