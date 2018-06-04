@@ -37,7 +37,7 @@ Contador() {
     then
         clear
     fi
-    for i in {1..0}
+    for i in {10..0}
     do
         printf "$i..."
         sleep 1 
